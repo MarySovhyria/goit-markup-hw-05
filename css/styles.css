@@ -157,9 +157,7 @@ letter-spacing: 0.02em;
 list-style-type: none;
 font-style: normal;
 margin-left: auto;
-transition-property: color;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .address :focus {
     color: var(--colo6);
@@ -170,6 +168,9 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 .address-header {
     text-decoration: none;
     color: var(--colo2);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
                         /* Main section */
@@ -421,7 +422,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     justify-content: center;
     align-items: center; 
     color: var(--colo12);
-    transition-property: border, color;
+    transition-property: border-color, color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -580,17 +581,18 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     background-color: var(--colo6);
     border: none;
 }
+.modal-button:hover .modal-icon {
+    fill: var(--colo5);
+}
+.modal-button:focus .modal-icon {
+    fill: var(--colo5);
+ }
 
 .modal-icon {
     fill: var(--colo);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-icon:hover {
-    fill: var(--colo5);
-}
-.modal-icon:focus {
-    fill: var(--colo5);
-}
+
                     /* Portfolio page */
 .main-section {
     padding: 96px 0 120px;
@@ -643,6 +645,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 .small {
     display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
 .small:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -650,6 +653,9 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .small:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transform: translateY(0%);
+}
+.small:focus .overlay-text {
     transform: translateY(0%);
 }
 .team-thumb {
